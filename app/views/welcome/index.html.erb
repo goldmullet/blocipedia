@@ -1,5 +1,7 @@
 <br>
-<div class="jumbotron">
+<div class="jumbotron" >
+  
+
   <h1>Bloccipedia</h1>
   <p>Blocipedia makes your life Easy</p>
   <p>
@@ -12,13 +14,35 @@
   <div class="col-md-4">
     <h2>Create your Wiki</h2>
     <p>Bloccit will deliver food and water to those in need, all over the world.</p>
+    <%= link_to "Create New", wikis_path, class: 'btn btn-default' %>
+
   </div>
   <div class="col-md-4">
     <h2>Tell the World</h2>
     <p>Bloccit will deliver money and education to those in need, all over the world.</p>
   </div>
-  <div class="col-md-4">
-    <h2>Share your story</h2>
-    <p>Bloccit will make you better looking: it's scientifically proven to make men look like Ryan Gosling and women look like Shakira.</p>
-  </div>
+
+<!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                          
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted">Copyright &copy; Chip Neff 2015</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
 </div>
