@@ -21,7 +21,7 @@ def create
    # Where the real magic happens
    charge = Stripe::Charge.create(
      customer: customer.id, # Note -- this is NOT the user_id in your app
-     amount: Amount.default,
+     amount: 29_95,
      description: "BigMoney Membership - #{current_user.email}",
      currency: 'usd'
    )
