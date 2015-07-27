@@ -5,12 +5,18 @@ class User < ActiveRecord::Base
 
   has_many :wikis
 
-  def admin?
+  after_initialize :set_role
+
+   def admin?
    role == 'admin'
-  end
+ end
  
-  def moderator?
-   role == 'moderator'
-  end
+ def premium?
+   role == 'premium'
+ end
+
+  def set_role
+    self.role  ||= 'standard'   
+  end        
 
 end
