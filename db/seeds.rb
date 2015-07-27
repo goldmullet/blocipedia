@@ -30,8 +30,28 @@ require 'faker'
    admin.skip_confirmation!
    admin.save!
 
- users = User.all
+
+ moderator = User.new(
+  name: 'Moderator User',
+  email: 'moderator@example.com',
+  password: 'helloworld',
+  role: 'moderator'
+ )
+ moderator.skip_confirmation!
+ moderator.save!
  
+ 
+ member = User.new(
+  name: 'Member User',
+  email: 'member@example.com',
+  password: 'helloworld',
+  role: 'standard'
+  )
+ member.skip_confirmation!
+ member.save!
+
+ users = User.all
+
  30.times do
    Wiki.create!(
      user: users.sample,
