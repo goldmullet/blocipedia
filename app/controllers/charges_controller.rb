@@ -28,7 +28,12 @@ def create
  
    flash[:success] = "Thanks for all the money, #{current_user.email}! Feel free to pay me again."
    redirect_to root_path(current_user) # or wherever
- 
+   # Upgrade the user account to 'premium' from standard
+   current_user.role = 'premium'
+   current_user.save
+
+
+
  # Stripe will send back CardErrors, with friendly messages
  # when something goes wrong.
  # This `rescue block` catches and displays those errors.

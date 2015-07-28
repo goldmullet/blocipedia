@@ -19,4 +19,8 @@ class User < ActiveRecord::Base
     self.role  ||= 'standard'   
   end        
 
+  def private_allowed?
+    role == 'admin' || role == 'premium'
+  end
+
 end
